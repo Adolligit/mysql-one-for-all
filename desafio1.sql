@@ -55,13 +55,13 @@ CREATE TABLE SpotifyClone.Historico(
     foreign key (usuario_id) references Usuario(id)
 );
 
-INSERT INTO SpotifyClone.Plano (id, nome, valor) VALUES 
+INSERT INTO SpotifyClone.Plano VALUES 
 (1, "gratuito", 0),
 (2, "universitário", 5.99),
 (3, "pessoal", 6.99),
 (4, "familiar", 7.99);
 
-INSERT INTO SpotifyClone.Usuario (id, nome, idade, plano_id, dt_assinatura) VALUES 
+INSERT INTO SpotifyClone.Usuario VALUES 
 (null, "Thati", 23, 1, "2019-10-20"),
 (null, "Cintia", 35, 4, "2017-12-30"),
 (null, "Bill", 20, 2, "2019-06-05"),
@@ -73,7 +73,7 @@ INSERT INTO SpotifyClone.Usuario (id, nome, idade, plano_id, dt_assinatura) VALU
 (null, "Angelina", 42, 4, "2018-04-29"),
 (null, "Paul", 46, 4, "2017-01-17");
 
-INSERT INTO SpotifyClone.Artista (id, nome) VALUES 
+INSERT INTO SpotifyClone.Artista VALUES 
 (null, "Walter Phoenix"),
 (null, "Peter Strong"),
 (null, "Lance Day"),
@@ -81,7 +81,7 @@ INSERT INTO SpotifyClone.Artista (id, nome) VALUES
 (null, "Tyler Isle"),
 (null, "Fog");
 
-INSERT INTO SpotifyClone.registro_seguidores (usuario_id, artista_id) VALUES 
+INSERT INTO SpotifyClone.registro_seguidores VALUES 
 (1, 1),
 (1, 4),
 (1, 3),
@@ -105,19 +105,19 @@ INSERT INTO SpotifyClone.registro_seguidores (usuario_id, artista_id) VALUES
 (10, 2),
 (10, 6);
 
-INSERT INTO SpotifyCLone.Album (nome, ano_lancamento, artista_id) VALUES 
-("Envious", 1990, 1),
-("Exuberant", 1993, 1),
-("Hallowed Steam", 1995, 2),
-("Incandescent", 1998, 3),
-("Temporary Culture", 2001, 4),
-("Library of liberty", 2003, 4),
-("Chained Down", 2007, 5),
-("Cabinet of fools", 2012, 5),
-("No guarantees", 2015, 5),
-("Apparatus", 2015, 6);
+INSERT INTO SpotifyClone.Album VALUES 
+(null, "Envious", 1990, 1),
+(null, "Exuberant", 1993, 1),
+(null, "Hallowed Steam", 1995, 2),
+(null, "Incandescent", 1998, 3),
+(null, "Temporary Culture", 2001, 4),
+(null, "Library of liberty", 2003, 4),
+(null, "Chained Down", 2007, 5),
+(null, "Cabinet of fools", 2012, 5),
+(null, "No guarantees", 2015, 5),
+(null, "Apparatus", 2015, 6);
 
-INSERT INTO SpotifyClone.Musica (id, nome, duracao_segundos, album_id) VALUES 
+INSERT INTO SpotifyClone.Musica VALUES 
 (null, "Soul For Us", 200, 1),
 (null, "Reflections Of Magic", 163, 1),
 (null, "Dance With Her Own", 116, 1),
@@ -159,7 +159,7 @@ INSERT INTO SpotifyClone.Musica (id, nome, duracao_segundos, album_id) VALUES
 (null, "Baby", 136, 6),
 (null, "You Make Me Feel So", 83, 6);
 
-INSERT INTO SpotifyClone.Historico (musica_id, usuario_id, dt_reproducao) VALUES 
+INSERT INTO SpotifyClone.Historico VALUES 
 (36, 1, "2020-02-28 10:45:55"),
 (25, 1, "2020-05-02 05:30:35"),
 (23, 1, "2020-03-06 11:22:33"),
