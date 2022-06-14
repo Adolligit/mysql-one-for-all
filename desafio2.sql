@@ -1,3 +1,8 @@
-SELECT count(id) AS cancoes FROM SpotifyClone.Musica;
-SELECT count(id) AS artista FROM SpotifyClone.Artista;
-SELECT count(id) AS albuns FROM SpotifyClone.Album;
+SELECT 
+	  MAX(m.id) cancoes,
+    MAX(a.id) artistas,
+    MAX(al.id) albuns
+FROM 
+  SpotifyClone.Album al,
+  SpotifyClone.Musica m,
+  SpotifyClone.Artista a;
