@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS SpotifyClone;
-
 CREATE DATABASE SpotifyClone;
 
 CREATE TABLE SpotifyClone.Plano(
@@ -56,7 +54,7 @@ CREATE TABLE SpotifyClone.Historico(
 );
 
 INSERT INTO SpotifyClone.Plano VALUES 
-(1, "gratuito", 0),
+(1, "gratuito", 0.00),
 (2, "universitário", 5.99),
 (3, "pessoal", 6.99),
 (4, "familiar", 7.99);
@@ -117,8 +115,6 @@ INSERT INTO SpotifyClone.Album VALUES
 (null, "No guarantees", 2015, 5),
 (null, "Apparatus", 2015, 6);
 
-
--- id, nome, duracao_segundos e album_id
 INSERT INTO SpotifyClone.Musica VALUES 
 (null, "Soul For Us", 200, 1),
 (null, "Reflections Of Magic", 163, 1),
