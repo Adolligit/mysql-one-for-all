@@ -3,7 +3,7 @@ CREATE DATABASE SpotifyClone;
 CREATE TABLE SpotifyClone.Plano(
 	id tinyint unsigned auto_increment primary key not null,
 	nome char(123) not null,
-    valor float not null
+    valor decimal(6,3) not null
 );
 
 CREATE TABLE SpotifyClone.Usuario(
@@ -115,6 +115,8 @@ INSERT INTO SpotifyClone.Album VALUES
 (null, "No guarantees", 2015, 5),
 (null, "Apparatus", 2015, 6);
 
+
+-- id, nome, duracao_segundos e album_id
 INSERT INTO SpotifyClone.Musica VALUES 
 (null, "Soul For Us", 200, 1),
 (null, "Reflections Of Magic", 163, 1),
