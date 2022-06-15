@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS SpotifyClone;
+
 CREATE DATABASE SpotifyClone;
 
 CREATE TABLE SpotifyClone.Plano(
@@ -39,7 +41,7 @@ CREATE TABLE SpotifyClone.Album(
 CREATE TABLE SpotifyClone.Musica(
 	id tinyint unsigned auto_increment not null primary key,
     nome char(123) unique not null,
-    duracao_segundos char(12) not null,
+    duracao_segundos tinyint unsigned not null,
     album_id tinyint unsigned not null,
     foreign key (album_id) references Album(id)
 );
@@ -115,6 +117,8 @@ INSERT INTO SpotifyClone.Album VALUES
 (null, "No guarantees", 2015, 5),
 (null, "Apparatus", 2015, 6);
 
+
+-- id, nome, duracao_segundos e album_id
 INSERT INTO SpotifyClone.Musica VALUES 
 (null, "Soul For Us", 200, 1),
 (null, "Reflections Of Magic", 163, 1),
